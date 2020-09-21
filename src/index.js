@@ -10,10 +10,10 @@ ReactDOM.render(
     <Global
       styles={css`
         /* Use better layout model (border-box) */
-        *,
+        /* *,
         *::before,
         *::after {
-          box-sizing: border-box;
+          box-sizing: border-box; */
         }
 
         body {

@@ -15,10 +15,19 @@ import logoSmall from './images/logoSmall.png';
 import facebook from './images/facebook.svg';
 import linkedin from './images/linkedin.svg';
 import twitter from './images/twitter.svg';
+import calendarMobile from './images/calendarMobile.png';
 
 const logoStyles = css`
   height: 25px;
   margin: 5px;
+`;
+
+const logoSmallStyles = css`
+  height: 150px;
+`;
+
+const calendarMobileStyles = css`
+  height: 300px;
 `;
 
 const headerStyles = css`
@@ -51,13 +60,40 @@ const buttonSignup = css`
 `;
 
 const firstSectionStyle = css`
-  div {
-    /* display: flex; */
+  > div {
+    display: flex;
     align-items: center;
   }
   img {
     width: 55%;
   }
+`;
+
+const secondSectionStyle = css`
+  text-align: center;
+`;
+
+const thirdSectionStyle = css`
+  text-align: center;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+  }
+`;
+
+const fourthSectionStyle = css`
+  text-align: center;
+`;
+
+const fifthSectionStyles = css`
+  text-align: center;
+  /* div {
+    display: flex;
+    align-items: center;
+  } */
 `;
 
 function App() {
@@ -78,18 +114,20 @@ function App() {
       <main>
         <section css={firstSectionStyle}>
           <div>
-            <h1>Transform Ideas Into Action</h1>
-            <p>
-              Visualize product roadmaps, project plans, and reports for
-              effective team collaboration and putting into action that impact
-            </p>
-            <input placeholder="Enter your mail" type="email"></input>
-            <button>Get Started - Free Forever</button>
-            <button>Watch Video/button</button>
+            <div>
+              <h1>Transform Ideas Into Action</h1>
+              <p>
+                Visualize product roadmaps, project plans, and reports for
+                effective team collaboration and putting into action that impact
+              </p>
+              <input placeholder="Enter your mail" type="email"></input>
+              <button>Get Started - Free Forever</button>
+              <button>Watch Video/button</button>
+            </div>
             <img src={banner} alt="" />
           </div>
         </section>
-        <section>
+        <section css={secondSectionStyle}>
           <h1>Creative Visualization</h1>
           <p>Different views for different roles and context</p>
           <div>
@@ -98,65 +136,70 @@ function App() {
             <button>Board</button>
             <button>Mind Map</button>
             <button>Calendar</button>
-            <img src={board} alt="" />
           </div>
+          <img src={board} alt="" />
         </section>
-        <section>
+        <section css={thirdSectionStyle}>
           <h1>Make Your Life Easier</h1>
           <p>Get started fast with suitable templates for every team.</p>
 
-          <a href="#a">
-            <img src={talkShow} alt="" />
-            <h1>Talk show- Event management</h1>
-            <p>
-              The Marketing department is responsible for running events.
-              Particularly, They mainly organize the seminar and talk show to
-              provide knowledge for audiences.
-            </p>
-          </a>
+          <div>
+            <a href="#a">
+              <img src={talkShow} alt="" />
+              <h1>Talk show- Event management</h1>
+              <p>
+                The Marketing department is responsible for running events.
+                Particularly, They mainly organize the seminar and talk show to
+                provide knowledge for audiences.
+              </p>
+            </a>
 
-          <a href="#a">
-            <img src={eventMarketing} alt="" />
-            <h1>Event Marketing</h1>
-            <p>
-              Event Marketing has always been considered as an opportunity to
-              build relationships, earn the trust of partners or customers and
-              generate reputation.
-            </p>
-          </a>
+            <a href="#a">
+              <img src={eventMarketing} alt="" />
+              <h1>Event Marketing</h1>
+              <p>
+                Event Marketing has always been considered as an opportunity to
+                build relationships, earn the trust of partners or customers and
+                generate reputation.
+              </p>
+            </a>
 
-          <a href="#a">
-            <img src={hr} alt="" />
-            <h1>Human Resource</h1>
-            <p>
-              The Human Resource Department has always faced the pressure to do
-              recruitment. For the large scale of the company, the labor force
-              is the inevitable issue.
-            </p>
-          </a>
+            <a href="#a">
+              <img src={hr} alt="" />
+              <h1>Human Resource</h1>
+              <p>
+                The Human Resource Department has always faced the pressure to
+                do recruitment. For the large scale of the company, the labor
+                force is the inevitable issue.
+              </p>
+            </a>
 
-          <a href="#a">
-            <img src={bugTracker} alt="" />
-            <h1>Bug & Issue Tracker</h1>
-            <p>
-              When It comes to the IT industry, Bug and Issue are inevitable in
-              every project. The team of IT need to determine the solution and
-              tool to manage and minimize the potential Bugs and Issues.
-            </p>
-          </a>
+            <a href="#a">
+              <img src={bugTracker} alt="" />
+              <h1>Bug & Issue Tracker</h1>
+              <p>
+                When It comes to the IT industry, Bug and Issue are inevitable
+                in every project. The team of IT need to determine the solution
+                and tool to manage and minimize the potential Bugs and Issues.
+              </p>
+            </a>
+          </div>
 
           <a href="#a">View all case studies</a>
         </section>
-        <section>
+        <section css={fourthSectionStyle}>
           <h1>Single Place</h1>
           <p>Your love Apps can be integrated into UpDiagram.com</p>
           <img src={radar} alt="" />
         </section>
-        <section>
-          <h1>Let inspire your team to take action</h1>
-          <img src={logoSmall} alt="" />
-          <input placeholder="Enter your mail" styles="mail"></input>
-          <button>Get Started - Free Forever</button>
+        <section css={fifthSectionStyles}>
+          <div>
+            <h1>Let inspire your team to take action</h1>
+            <img css={logoSmallStyles} src={logoSmall} alt="" />
+            <input placeholder="Enter your mail" styles="mail"></input>
+            <button>Get Started - Free Forever</button>
+          </div>
+          <img css={calendarMobileStyles} src={calendarMobile} alt="" />
         </section>
       </main>
       <footer>
