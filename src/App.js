@@ -35,6 +35,7 @@ const calendarMobileStyles = css`
 const headerStyles = css`
   background-color: #fff;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 10px 190px;
   position: fixed;
@@ -43,6 +44,9 @@ const headerStyles = css`
 `;
 
 const navStyles = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   a {
     margin-right: 20px;
     color: #4a4a4a;
@@ -117,38 +121,36 @@ const linkBold = css`
 const thirdSectionStyle = css`
   ${generalSectionStyle}
   text-align: center;
-  div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const innerSectionStyle = css`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    padding: 10px;
+    width: 250px;
+    height: 460px;
+    text-decoration: none;
+    border: 2px solid #9896a4;
+    border-radius: 20%;
+    box-shadow: 0px 2px 0px 0px #000000;
+    margin: 10px 10px;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    h1 {
-      color: black;
+    flex-direction: column;
+    justify-content: space-around;
+    img {
+      height: 130px;
+      width: 153px;
+      align-self: center;
+      margin-top: 10px;
     }
     p {
-      color: black;
-    }
-    a {
-      text-decoration: none;
-      border: 2px solid #9896a4;
-      border-radius: 20%;
-      box-shadow: 0px 2px 0px 0px #000000;
-      height: 440px;
-      margin: 30px 20px 60px 10px;
-      padding: 20px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 20%;
-      p {
-        color: #9896a4;
-        font-size: 16px;
-      }
-      @media (max-width: 700px) {
-        width: 50%;
-      }
-      @media (max-width: 460px) {
-        width: 100%;
-      }
+      display: contents;
     }
   }
 `;
@@ -223,16 +225,20 @@ function App() {
   return (
     <>
       <header css={headerStyles}>
-        <img src={logo} alt="" css={logoStyles} />
-        <nav css={navStyles}>
-          <a href="#a">Features</a>
-          <a href="#a">Templates</a>
-          <a href="#a">Contact Us</a>
-          <a href="#a">Blog</a>
-          <a href="#a">Pricing</a>
-          <button css={buttonSignup}>Sign Up</button>
-          <img src={flag} alt="" css={flagStyles} />
-        </nav>
+        <div>
+          <img src={logo} alt="" css={logoStyles} />
+        </div>
+        <div>
+          <nav css={navStyles}>
+            <a href="#a">Features</a>
+            <a href="#a">Templates</a>
+            <a href="#a">Contact Us</a>
+            <a href="#a">Blog</a>
+            <a href="#a">Pricing</a>
+            <button css={buttonSignup}>Sign Up</button>
+            <img src={flag} alt="" css={flagStyles} />
+          </nav>
+        </div>
       </header>
       <main>
         <section css={firstSectionStyle}>
@@ -268,7 +274,7 @@ function App() {
           <h1>Make Your Life Easier</h1>
           <p>Get started fast with suitable templates for every team.</p>
 
-          <div>
+          <div css={innerSectionStyle}>
             <a href="#a">
               <img src={talkShow} alt="" />
               <h2>Talk show- Event management</h2>
@@ -309,7 +315,7 @@ function App() {
               </p>
             </a>
           </div>
-
+          <br />
           <a css={linkBold} href="#a">
             View all case studies
           </a>

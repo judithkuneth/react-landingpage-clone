@@ -63,10 +63,6 @@ ReactDOM.render(
             margin-right: 20px;
             margin-top: 20px;
           }
-          h1 {
-          }
-          p {
-          }
         }
       `}
     />
