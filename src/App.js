@@ -1,5 +1,7 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
+// eslint-disable-next-line
+import React from 'react';
 import { jsx, css } from '@emotion/core';
 import logo from './logo.png';
 import flag from './flag.png';
@@ -169,8 +171,7 @@ const imageRadarStyle = css`
 
 const fifthSectionStyles = css`
   text-align: center;
-  /* background-repeat: no-repeat;
-  background-size: 25%; */
+
   > div {
     display: flex;
     align-items: center;
