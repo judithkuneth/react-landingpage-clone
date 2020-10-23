@@ -1,6 +1,5 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
-import React from 'react';
 import { jsx, css } from '@emotion/core';
 import logo from './logo.png';
 import flag from './flag.png';
